@@ -4,7 +4,7 @@ class EvenNumber
   public void prime(int s)
   {
     int b,value=s,isPrime=0,tot=0;
-    for(int k=2;k<=s/2;k++)
+    for(int k=2;k<=value/2;k++)
     {
       if(value%k==0)
       {
