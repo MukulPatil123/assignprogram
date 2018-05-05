@@ -1,0 +1,125 @@
+farming assistant web service
+-------------------------------------------
+
+page
+product
+deal
+auction
+sold
+sms
+chat
+ad
+notification
+farmer
+dealer
+administrator
+
+-------------------------------------------
+chat
+   farmer_id
+   farmer_chat
+   dealer_chat
+
+-------------------------------------------
+ ad
+   ad_id
+   ad_name
+   ad_time
+
+-------------------------------------------
+notification
+   farmer_id
+   notification_month
+
+-------------------------------------------
+auction
+   product_id
+   auction_id
+   product_actual_price
+   auction_price
+   auction_time
+   deal_id
+   auction_month
+
+-------------------------------------------
+order
+   o_id
+   p_id
+   f_id
+
+
+-------------------------------------------
+sold
+   farmer_id
+   sold_id
+   product_id
+   product_actual_price
+   sold_month
+
+-------------------------------------------
+product
+   id
+   name
+   type
+   actual_price
+   quality
+   quantity
+   review
+
+-------------------------------------------
+
+
+-------------------------------------------
+sms
+   farmer_no
+
+
+-------------------------------------------
+personal details
+   id
+   name
+   mail
+
+farmer
+   id
+   personal_id
+   que
+   username
+   password
+   chat
+   no
+
+address details
+   id
+   f_id
+   area
+   flat_id
+   city
+   state
+
+
+
+dealer
+   name
+   id
+   username
+   password
+   no
+   rating
+   city
+   mail
+   que
+
+
+administrator
+   name
+   id
+   username
+   password
+   no
+   city
+   mail
+   que
+---------------------------------------------
+
+
