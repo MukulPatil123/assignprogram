@@ -1,125 +1,179 @@
 farming assistant web service
 -------------------------------------------
 
-page
-product
-deal
-auction
-sold
-sms
-chat
+farmer
+dealer
+admin
 ad
 notification
-farmer
-dealer
-administrator
-
--------------------------------------------
-chat
-   farmer_id
-   farmer_chat
-   dealer_chat
-
--------------------------------------------
- ad
-   ad_id
-   ad_name
-   ad_time
-
--------------------------------------------
-notification
-   farmer_id
-   notification_month
-
--------------------------------------------
-auction
-   product_id
-   auction_id
-   product_actual_price
-   auction_price
-   auction_time
-   deal_id
-   auction_month
-
--------------------------------------------
-order
-   o_id
-   p_id
-   f_id
-
-
--------------------------------------------
-sold
-   farmer_id
-   sold_id
-   product_id
-   product_actual_price
-   sold_month
-
--------------------------------------------
 product
-   id
-   name
-   type
-   actual_price
-   quality
-   quantity
-   review
+order
+payment
+account detail
+auction
 
 -------------------------------------------
 
+user
+   id                        (int)(primary key)
+   user_type_id              (int)
+   name                      (varchar(20))
+   email                     (varchar(20))
+   mobno                     (vvarchar(13))
+   address_id
+
+user_type
+   id                        (int)(primary key)
+   name                      (varchar(20))
 
 -------------------------------------------
-sms
-   farmer_no
+
+product
+   id                         (int)(primary key)
+   name                       (varchar(20))
+   price                      (int)
+   product_type_id            (int)
+
+product_type
+   id                          (int)(primary key)
+   name                        (varchar(20))
+
+-------------------------------------------
+
+order
+   id                          (int)(primary key)
+   user_id                     (int)(foreign key)
+   order_items_id              (int)
+   total                       (int)
+   status_id                   (int)
+
+status
+   id                          (int)(primary key)
+   name                        (varchar(20))
+
+order_itmes
+   id                          (int)(primary key)
+   product_id                  (int)(foreign key)
+   quantity                    (int)
+   total_price                 (int)
+
+--------------------------------------------
+
+ad
+   id                          (int)(primary key)
+   user_id                     (int)(foreign key)
+   name                        (varchar(20))
+   date                        (timestamp)
+   file                        (varchar(20))
 
 
 -------------------------------------------
-personal details
-   id
-   name
-   mail
 
-farmer
-   id
-   personal_id
-   que
-   username
-   password
-   chat
-   no
+notification
+   id                           (int)(primary key)
+   user_id                      (int)(foreign key)
+   payment_id                   (int)(foreign key)
+   link                         (varchar(20))
+   subject                      (varchar(20))
+   date                         (timestamp)
 
-address details
-   id
-   f_id
-   area
-   flat_id
-   city
-   state
+--------------------------------------------
 
+review
+   id                          (int)(primary key)
+   product_id                  (int)(foreign key)
+   user_id                     (int)(foreign key)
+   rate                        (int)
+   msg                         (varchar(20))
+   date                        (timestamp)
 
+-----------------------------------------------
 
-dealer
-   name
-   id
-   username
-   password
-   no
-   rating
-   city
-   mail
-   que
+payment
+   id                          (int)(primary key)
+   account_id                  (int)(froeign key)
+   order_id                    (int)(primary key)
+   payment_mode_id             (varchar(20))
+   status_id                   (varchar(20))
+   expiry_date                 (timestamp)
+
+payment_mode_id
+   id                          (int)(primary key)
+   name                        (varchar(20))
 
 
-administrator
-   name
-   id
-   username
-   password
-   no
-   city
-   mail
-   que
----------------------------------------------
+-----------------------------------------------
+
+account
+   id                          (int)(primary key)
+   user_id                     (int)(foreign key)
+   account_number              (int)
+   branch                      (varchar(20))
+   bank_type_id                (int)
+
+bank_type
+   id                          (int)(primary key)
+   name                        (varchar(20))
+   ifsc_code                   (int)
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
