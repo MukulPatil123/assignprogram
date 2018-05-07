@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class EvenPrime
 {
- public static void main(String[] args) 
+ public static void main(String[] args)
   {
   EvenPrime pr =new EvenPrime();
   Scanner sc= new Scanner(System.in);
@@ -24,8 +24,8 @@ class EvenPrime
       for(j=0;j<column;j++)
        {
         sum=arr[i][j]+arr[j][i];
-     
-        pr.prime(tot,arr[i][j],arr[j][i]);
+
+        pr.prime(arr[i][j],arr[j][i]);
     }
     }
     public void prime(int tot,int n1,int n2)
@@ -46,7 +46,7 @@ class EvenPrime
           sum=sum+n%10;
           number=number/10;
          }
-           
+
        if(tot%2!=0)
         {
          System.out.println("addition "+n1+ " "+n2+" odd and prime"+tot );

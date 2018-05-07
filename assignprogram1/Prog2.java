@@ -21,8 +21,8 @@ class TwoD
 		{
 			for(int j=0;j<c;j++)
 			{
-				Scanner sc2=new Scanner(System.in);
-				mat1[r][c]=sc2.nextInt();
+				Scanner sc1=new Scanner(System.in);
+				int mat1[r][c]=sc1.nextInt();
 			}
 		}
 
@@ -33,8 +33,8 @@ class TwoD
 		{
 			for(int j=0;j<c;j++)
 			{
-				Scanner sc3=new Scanner(System.in);
-				mat2[][]=sc3.nextInt();
+				Scanner sc2=new Scanner(System.in);
+				int mat2[][]=sc2.nextInt();
 			}
 		}
 
@@ -89,7 +89,7 @@ class TwoD
 		//prime or not
 		for(int a=2;a<=decimal;a++)
 		{
-			if(decimal/a%2==0 || decima;/a%2==1)
+			if(decimal/a%2==0 || decimal/a%2==1)
 			System.out.println("Prime");
 			break;
 		}
